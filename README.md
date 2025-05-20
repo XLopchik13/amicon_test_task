@@ -8,7 +8,7 @@
 ## Использование:
 
 ### Auto Test mode:
-1. Перейти на желаемую ветку (udp/tsp):
+1. Перейти на желаемую ветку (udp/tcp):
     ```bash
    git checkout <branch_name>
    
