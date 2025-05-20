@@ -8,12 +8,12 @@ RECEIVED="test/received_data.bin"
 mkdir -p test
 head -c 2000000 /dev/urandom > $FILE
 
-# Запуск TCP сервера
+# Запуск UDP сервера
 python3 src/server.py $FILE &
 SERVER_PID=$!
 sleep 1
 
-# Запуск клиента
+# Запуск UDP клиента
 python3 src/client.py $RECEIVED
 
 # Проверка
