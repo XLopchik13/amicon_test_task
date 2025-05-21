@@ -3,7 +3,8 @@ import sys
 import os
 
 
-def start_server(filename: str, host: str = '0.0.0.0', port: int = 8080):
+def start_tcp_server(filename: str, host: str = '0.0.0.0', port: int = 8080):
+    """Запускает TCP сервер, который принимает входящие соединения и передаёт указанный файл"""
     print(f"Serving {os.path.abspath(filename)}")
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -21,4 +22,4 @@ def start_server(filename: str, host: str = '0.0.0.0', port: int = 8080):
 
 
 if __name__ == "__main__":
-    start_server(sys.argv[1])
+    start_tcp_server(sys.argv[1])
