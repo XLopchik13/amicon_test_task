@@ -5,6 +5,7 @@ CHUNK_SIZE = 4096
 
 
 def request_udp_file(save_as: str, server_ip: str = '127.0.0.1', port: int = 8080):
+    """Отправляет запрос UDP серверу, принимает и сохраняет файл"""
     print(f"Requesting from {server_ip}:{port}")
 
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:

@@ -6,6 +6,7 @@ CHUNK_SIZE = 4096
 
 
 def start_udp_server(filename: str, host: str = '0.0.0.0', port: int = 8080):
+    """Запускает UDP сервер, который ожидает запрос от клиента и передаёт файл"""
     print(f"Serving {os.path.abspath(filename)}")
 
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
